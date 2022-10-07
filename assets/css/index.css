@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .drop-down-link:hover ~ .drop-down-menu {
+        display: flex;
+    }
+    
+    .drop-down-link:hover ~ img#arrow-down {
+        display: none;
+    }
+}

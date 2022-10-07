@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body class="container mx-auto">
+  <header>
+    <nav class="h-10 flex my-4 bg-white px-2">
+      <div class="logo py-2 mr-6">
+        <img src="./assets/images/logo.svg" alt="logo" title="logo">
+      </div>
+      <ul class="hidden md:flex space-x-8 py-2 nav-list">
+        <li class="relative">
+          <a class="drop-down-link feature" href="#" title="Features" >
+            Features
+            <span class="inline-block">
+              <img src="./assets/images/icon-arrow-down.svg" alt="icon-arrow-down" id="arrow-icon" />
+            </span>
+          </a>
+          <div class="drop-down-menu feature-menu absolute top-8 flex-col -left-5 bg-white rounded-lg p-6 shadow-2xl space-y-2 mx-2 mt-2 -ml-8 hidden">
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-todo.svg" alt="icon-todo" />
+              <span class="mx-2">Todo List</span>
+            </a>
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-calendar.svg" alt="icon-calendar" />
+              <span class="mx-2">Calendar </span>
+            </a>
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-reminders.svg" alt="icon-reminders" />
+              <span class="mx-2 ">Remenders </span>
+            </a>
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-planning.svg" alt="icon-planning" />
+              <span class="mx-2">Planning </span>
+            </a>
+          </div>
+        </li>
+        <li class="relative">
+          <a href="#" title="Company" class="drop-down-link company">
+            Company
+            <span class="inline-block">
+              <img src="./assets/images/icon-arrow-down.svg" alt="icon-arrow-down" id="arrow-icon" />
+            </span>
+          </a>
+          <div class="drop-down-menu company-menu absolute top-8 left-5 flex-col bg-white rounded-lg p-6 shadow-2xl mx-2 space-y-2 mt-2 hidden">
+            <a href="#">History</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" title="Careers">Careers</a>
+        </li>
+        <li>
+          <a href="#" title="About">About</a>
+        </li>
+      </ul>
+
+      <ul class="hidden md:flex ml-auto space-x-4">
+        <li class="py-2 px-5">
+          <a href="#" title="login">Login</a>
+        </li>
+        <li class="border border-almostBlack border-opacity-30 rounded-xl py-2 px-5 cursor-pointer hover:border-opacity-100">
+          <a href="#" title="Register">Register</a>
+        </li>
+      </ul>
+      <div class="ml-auto md:hidden">
+        <img src="./assets/images/icon-menu.svg" alt="menu hamburger" title="menu" role="button" id="icon-menu" />
+      </div>
+
+<!-- Mobile menu -->
+    <div class="bg-almostBlack/60 fixed w-full h-full inset-0 md:hidden hidden mobile-menu">
+      <div class="w-3/5 md:hidden bg-white ml-auto h-full  px-4">
+        <div class="md:hidden py-4 px-4">
+          <img 
+            src="./assets/images/icon-close-menu.svg"
+            alt="icon-close-menu" 
+            title="close" 
+            role="button"
+            id="icon-close-menu"
+            class=" float-right" />
+        </div>
+        <ul class="flex flex-col space-y-4 pt-20 px-5">
+        <li>
+          <a href="#" title="Features" class="drop-down-link" id="feature">
+            Features
+            <span class="inline-block">
+              <img src="./assets/images/icon-arrow-down.svg" alt="icon-arrow-down" id="arrow-icon" />
+            </span>
+          </a>
+          <div class="flex-col bg-white space-y-2 mx-2 mt-5 ml-5 drop-down-menu hidden">
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-todo.svg" alt="icon-todo" />
+              <span class="mx-2">Todo List</span>
+            </a>
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-calendar.svg" alt="icon-calendar" />
+              <span class="mx-2">Calendar </span>
+            </a>
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-reminders.svg" alt="icon-reminders" />
+              <span class="mx-2">Remenders </span>
+            </a>
+            <a href="#" class="flex">
+              <img class="m-1" src="./assets/images/icon-planning.svg" alt="icon-planning" />
+              <span class="mx-2">Planning </span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href="#" title="Company" class="drop-down-link" id="company">
+            Company
+            <span class="inline-block">
+              <img src="./assets/images/icon-arrow-down.svg" alt="icon-arrow-down" id="arrow-icon" />
+            </span>
+          </a>
+          <div class="drop-down-menu flex-col bg-white mx-2 space-y-2 ml-6 mt-5 hidden">
+            <a href="#">History</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" title="Careers">Careers</a>
+        </li>
+        <li>
+          <a href="#" title="About">About</a>
+        </li>
+      </ul>
+
+      <ul class="flex flex-col ml-auto justify-center items-center">
+        <li class="py-2 px-5">
+          <a href="#" title="login">Login</a>
+        </li>
+        <li class="border border-almostBlack rounded-xl py-2 px-10 w-full mx-auto flex justify-center">
+          <a href="#" title="Register" class="text-center">Register</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+  </header>
+
+  <div class="flex flex-col md:flex-row-reverse md:px-20 md:h-auto md:w-auto">
+    <div class=" md:w-1/2">
+      <img src="./assets/images/image-hero-desktop.png" class="hidden md:block mb-20" alt="image hero" />
+      <img src="./assets/images/image-hero-mobile.png" class="md:hidden" alt="image hero" />
+    </div>
+    <div class="flex flex-col text-center md:text-left px-4 md:py-12 my-10 md:my-20 md:w-1/2">
+      <h1 class="font-bold text-almostBlack text-4xl md:text-7xl md:mt-8">
+        Make <br class="hidden md:block"> remote work
+      </h1>
+      <p class="text-almostBlack text-xl md:w-5/6 mt-8 md:mt-10">
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <div class="my-10 md:my-20">
+        <a href="#" class="text-xl mx-auto py-2 px-5 font-semibold bg-almostBlack rounded-xl 
+       hover:bg-almostWithe hover:text-almostBlack border border-almostBlack text-almostWithe">
+          Learn more
+        </a>
+      </div>
+
+      <div class="flex md:w-5/6 justify-between mt-5 md:mt-20">
+        <img src="./assets/images/client-databiz.svg" alt="client-databiz" title="databiz" />
+        <img src="./assets/images/client-audiophile.svg" alt="client-audiophile" title="audiophile" />
+        <img src="./assets/images/client-meet.svg" alt="client-meet" title="Meet" />
+        <img src="./assets/images/client-maker.svg" alt="client-maker" title="client-maker" />
+      </div>
+    </div>
+  </div>
+
+  <div class="text-xs text-center attribution my-5">
+    Challenge by
+    <a class="text-blue " href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      Frontend Mentor
+    </a>.
+    Coded by <a class="text-blue " href="#">Wilfried WIWI</a>.
+  </div>
+
+  <script src="./assets/scripts/main.js"></script>
+</body>
+
+</html>
